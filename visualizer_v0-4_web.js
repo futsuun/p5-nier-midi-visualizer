@@ -473,10 +473,10 @@ function drawThemeSel(selX, selY, selSize){
 
 //////////////////////////////CODE STARTS HERE///////////////////////////////////
 function preload(){
-  font = loadFont('/assets/Inconsolata.otf');
-  font2 = loadFont('/assets/FOT-Rodin Pro L.otf');
-  font3 = loadFont('/assets/FOT-Rodin Pro DB.otf');
-  font4 = loadFont('/assets/Helvetica Light Regular.otf');
+  font = loadFont('assets/Inconsolata.otf');
+  font2 = loadFont('assets/FOT-Rodin Pro L.otf');
+  font3 = loadFont('assets/FOT-Rodin Pro DB.otf');
+  font4 = loadFont('assets/Helvetica Light Regular.otf');
 }
 
 function setup(){
