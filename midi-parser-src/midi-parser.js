@@ -1,4 +1,5 @@
 // import midi parser (will create a reference in the global scope)
+/*
 import './main.js';
 
 // identify the global scope
@@ -14,3 +15,4 @@ delete _global.MidiParser;
 
 // export the stored MidiParser reference
 export {_MidiParser as MidiParser};
+*/
