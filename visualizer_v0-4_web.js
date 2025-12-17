@@ -1,3 +1,5 @@
+import {MidiParser} from "./midi-parser-src/midi-parser.js";
+
 let midiArrayRaw
 let midiData
 var i
