@@ -1,5 +1,5 @@
 # Nier-themed Midi Visualizer
-Midi visualizer with a Nier-themed aesthetic, created with p5js. Aside from the Nier theme, customization of background and note colours is also possible. The visualizer takes in a Type 0 MIDI file and draws out notes on the canvas. Visualizer output can be captured and saved into a .webm file, and is done so using CCapture.js. The information here is also displayed on the visualizer page itself: [https://futsuun.github.io/p5-nier-midi-visualizer/](https://futsuun.github.io/p5-nier-midi-visualizer/)
+Midi visualizer with a Nier-themed aesthetic, created with p5js. Aside from the Nier theme, customization of background and note colours is also possible. The visualizer takes in a Type 0 MIDI file and draws out notes on the canvas. Visualizer output can be captured and saved into a .webm file, and is done so using CCapture.js. The information here is also displayed on the visualizer page itself: [https://futsuun.github.io/p5-nier-themed-midi-visualizer/](https://futsuun.github.io/p5-nier-themed-midi-visualizer/)
 
 # MIDI File requirements
 - MIDI file MUST be a Type 0 Midi File (all tracks merged into a single MIDI track)
