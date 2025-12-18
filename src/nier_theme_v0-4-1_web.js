@@ -8,7 +8,7 @@ function drawInit(x,y, initTempo){
   fill(186,181,161);
   rect(x,y,200,20);
   
-  if(frameCount-frameCountClicked+240>(timeInBarMidi/ppqn)*(initTempo/1000000)*fps){
+  if(frameCount-frameCountClicked+180>(timeInBarMidi/ppqn)*(initTempo/1000000)*fps){
     deltaX = deltaTimeFps*0.4
     initW += deltaX;
     if(initW>200){
