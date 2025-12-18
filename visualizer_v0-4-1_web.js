@@ -50,6 +50,7 @@ let checkFrameInput //check if user frame input is a valid integer
 let deltaTimeFps = (1/fps)*1000; //custom deltaTime but fixed to fps, to prevent issues during capture due to very slow frame draw rate (only used in aesthetic functions, not in midi)
 let isTempoEmbedded //check if tempo is embedded in MIDI file
 let customBpm = false //check if customBPM has been set
+let isTimeSigEmbedded
 
 //Menu & formatting variables
 let menuAlignX = 10
@@ -115,6 +116,7 @@ function midiProcess(midiData) {
   midiNotes = [];
   tempoMap = [];
   numNotes = 0;
+  isTimeSigEmbedded = false;
   
   if(isTempoEmbedded == false){
     tempoMap[0] = [1000000*(60/bpmInput.value()),0];
@@ -129,6 +131,7 @@ function midiProcess(midiData) {
   for(i=0; i < numLines; i+=1){
     if(match(midiData[i], "timeSig")!==null){
       getTimeSig(midiData[i]);
+      isTimeSigEmbedded = true;
     }
     if(match(midiData[i], "clock")!==null){
       getClock(midiData[i]);
@@ -384,9 +387,12 @@ function showMidiTypeMsg(){
   fill(209,205,183);
   rect(0, 185, 400, 25);
   
-  if(isTypeZero == true){
+  if((isTypeZero == true) && (isTimeSigEmbedded == true)){
     userMsgMidiType = "Ok!";
     fill('black');
+  }else if((isTypeZero == true) && (isTimeSigEmbedded == false)){
+    userMsgMidiType = "Time Signature not detected!";
+    fill('red');
   }else if(isTypeZero == false){
     userMsgMidiType = "Please use a midi file with Type 0 format";
     fill('red');
@@ -737,7 +743,7 @@ function draw(){
     }
 
     //disable capture button if input is invalid OR no midi file loaded
-    if(midiData && (checkFrameInput === "Pass") && ((isTempoEmbedded == true) || (customBpm == true))){
+    if(midiData && (checkFrameInput === "Pass") && ((isTempoEmbedded == true) || (customBpm == true)) && (isTimeSigEmbedded == true)){
       captureButton.removeAttribute('disabled');
     }else{
       captureButton.attribute('disabled', '');
@@ -753,7 +759,7 @@ function draw(){
     }
 
     //disable preview button if no midi file loaded & no tempo embedded in MIDI
-    if(midiData && ((isTempoEmbedded == true) || (customBpm == true))){
+    if(midiData && ((isTempoEmbedded == true) || (customBpm == true)) && (isTimeSigEmbedded == true)){
       startButton.removeAttribute('disabled');
     }else{
       startButton.attribute('disabled', '');
