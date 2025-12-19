@@ -648,8 +648,8 @@ function setup(){
   drawInfoBox(menuFooterY+120, 220);
   drawInfoBox(menuFooterY+400, 70);
   drawInfoBox(menuFooterY+530, 400);
-  drawInfoBox(menuFooterY+990, 260);
-  drawInfoBox(menuFooterY+1310, 260);
+  drawInfoBox(menuFooterY+990, 330);
+  drawInfoBox(menuFooterY+1380, 260);
   
   fill('#bab5a1');
   textFont("Helvetica");
@@ -659,7 +659,7 @@ function setup(){
   text("Output Format", menuAlignX+10, menuFooterY+430);
   text("Using the Visualizer", menuAlignX+10, menuFooterY+560);
   text("Credits", menuAlignX+10, menuFooterY+1020);
-  text("Comments", menuAlignX+10, menuFooterY+1340);
+  text("Comments", menuAlignX+10, menuFooterY+1410);
   
   fill('#454138');
   textSize(20);
@@ -689,17 +689,18 @@ Canvas captured using CCapture.js\n
 Midi parsed using MidiParser.js\n
 Fonts used (Inconsolata, FOT-Rodin Pro L, Helvetica)\n
 YoRHa CSS page by metakirby5 (for referencing)\n
-Special thanks to jteosw for reviewing my horrible code
-`, menuAlignX+40, menuFooterY+1290);
+Special thanks to jteosw for reviewing my horrible code\n
+Huge thanks to potatoteto (the best potato) for helping me catch fix some bugs, and also Spiralflip and jfoe (a.k.a Jeff) for testing and catching some exceptions
+`, menuAlignX+40, menuFooterY+1330);
   
   text(`I am not a coder or developer by trade, but I originally made this because I wanted a visualizer; hopefully this might be useful for someone else out there too...\n
 I may not continue work on this (as it was kind of a one-time thing for me), but for any feedback, general comments, or anything else related, you can drop an email at futsuup@gmail.com\n
-Some of my other links:`, menuAlignX+10, menuFooterY+1460)
+Some of my other links:`, menuAlignX+10, menuFooterY+1540)
   
   drawSquares(menuAlignX+15, menuFooterY+185, 4, 40);
   drawSquares(menuAlignX+15, menuFooterY+460, 1, 0);
   drawSquares(menuAlignX+15, menuFooterY+590, 9, 40);
-  drawSquares(menuAlignX+15, menuFooterY+1050, 6, 40);
+  drawSquares(menuAlignX+15, menuFooterY+1050, 7, 40);
   
   linkCCapture = createA('https://github.com/spite/ccapture.js/','https://github.com/spite/ccapture.js/');
   linkCCapture.position(menuAlignX+360, menuFooterY+1092);
@@ -714,13 +715,13 @@ Some of my other links:`, menuAlignX+10, menuFooterY+1460)
   linkYorha.style('font-family', 'Helvetica');
   
   linkTwitter = createA('https://x.com/futsuunohito2','Twitter');
-  linkTwitter.position(menuAlignX+10, menuFooterY+1472);
+  linkTwitter.position(menuAlignX+10, menuFooterY+1552);
   linkTwitter.style('font-family', 'Helvetica');
   linkTwitter.style('font-size', '18px');
   linkTwitter.style('letter-spacing', '0.05rem');
   
   linkCarrd = createA('https://futsuunohito.crd.co/', 'Carrd site');
-  linkCarrd.position(menuAlignX+10, menuFooterY+1512);
+  linkCarrd.position(menuAlignX+10, menuFooterY+1592);
   linkCarrd.style('font-family', 'Helvetica');
   linkCarrd.style('font-size', '18px');
   linkCarrd.style('letter-spacing', '0.05rem');
